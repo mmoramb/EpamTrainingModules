@@ -1,0 +1,7 @@
+com\deliver\mocking\EventMockServiceTest.class
+com\deliver\service\UserServiceTest.class
+com\deliver\service\EventServiceTest.class
+com\deliver\service\TicketServiceTest.class
+com\deliver\suit\ServiceSuitTest.class
+estudiante\EstudianteTest.class
+com\deliver\integration\BookingFacadeTest.class

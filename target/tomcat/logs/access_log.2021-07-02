@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [02/Jul/2021:13:46:19 -0500] "GET /spring-examples/index HTTP/1.1" 200 2027 http-nio-8080-exec-1 890
+0:0:0:0:0:0:0:1 - - [02/Jul/2021:13:46:19 -0500] "GET /spring-examples/%3Cspring:theme%20code='stylesheet'%20text=''/%3E HTTP/1.1" 404 992 http-nio-8080-exec-2 11

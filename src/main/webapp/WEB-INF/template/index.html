@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HPlus</title>
+    <!--<link rel="stylesheet" href="<spring:theme code='stylesheet' text=''/>" type="text/css" />
+    --><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function deleteUser(event){
+            event.preventDefault();
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("DELETE", "http://localhost:8080/spring-examples/deleteUser/6", true);
+            xhttp.send();
+        }
+
+        function deleteEvent(event){
+            event.preventDefault();
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("DELETE", "http://localhost:8080/spring-examples/deleteEvent/9", true);
+            xhttp.send();
+        }
+
+        function cancelTicket(event){
+            event.preventDefault();
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("DELETE", "http://localhost:8080/spring-examples/cancelTicket/6", true);
+            xhttp.send();
+        }
+
+</script>
+</head>
+<body>
+<a th:href="@{/events(title='party5',pageSize=2,pageNum=2)}">See events</a>
+<br/>
+<a th:href="@{/event/2}">Event 2</a>
+<br/>
+<a th:href="@{/eventsByDay(day='2021/04/10',pageSize=2,pageNum=2)}">See events by day</a>
+<br />
+<a th:href="@{/user/2}">User 2</a>
+<br />
+<a th:href="@{/usersByEmail(email='tickets5@gmail.com')}">User By Email</a>
+<br />
+<a th:href="@{/users(name='user5',pageSize=2,pageNum=1)}">Users by name</a>
+<br />
+<a th:href="@{/ticketsByUser(userId=1,pageSize=2,pageNum=1)}">tickets by user</a>
+<br />
+<a th:href="@{/ticketsByEvent(eventId=4,pageSize=2,pageNum=1)}">tickets by event</a>
+<br />
+<a th:href="@{/cancelTicket/6}" onclick="cancelTicket(event)">Cancel ticket</a>
+<br />
+<a th:href="@{/getTicketsByEvent(eventId=4,pageSize=2,pageNum=1)}">See events model and view</a>
+<br />
+<a th:href="@{/createEvent(id=10,title='event10',date='2021/06/23')}">crear event</a>
+<br />
+<a th:href="@{/updateEvent(id=10,title='event10',date='2021/06/23')}">update event</a>
+<br />
+<a th:href="@{/createUser(id=7,name='user7',email='tickets6@gmail.com')}">Crear user</a>
+<br />
+<a th:href="@{/updateUser(id=7,name='user8',email='tickets8@gmail.com')}">Update user</a>
+<br />
+<a th:href="@{/bookTicket(userId=2,eventId=2,place=2,
+category='PREMIUM')}">Create ticket</a>
+<br />
+<a th:href="@{/preloadTickets}">Batch tickets</a>
+<br />
+<a th:href="@{/exportPdf(eventId=4,pageSize=2,pageNum=1)}">Export Pdf</a>
+<br />
+<a th:href="@{/exceptionHandling}">Show error page</a>
+<br />
+<a th:href="@{/deleteEvent/9}" onclick="deleteEvent(event)">Delete event</a>
+<br />
+<a th:href="@{/deleteUser/6}" onclick="deleteUser(event)">Delete user</a>
+</body>
+</html>
